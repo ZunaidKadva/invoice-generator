@@ -29,7 +29,9 @@ export default function TextForm() {
     
     
     const invoiceNumber = (min,max)=>{
+    // console.log("it is invoice generator");
        return Math.floor(Math.random() * (max - min + 1)) + min;
+       
     }
     
 
@@ -55,14 +57,14 @@ export default function TextForm() {
 
         const doc = new jsPDF('p','pt','a4');
             
-        const arr = doc.getFontList();
-        console.log(arr);
+       // const arr = doc.getFontList();
+       // console.log(arr);
         
         // to get width and height of the pdf page.
-        const wi = doc.internal.pageSize.getWidth();
-        console.log("width= " +wi);
-        const hei = doc.internal.pageSize.getHeight();
-        console.log("width= " +hei);
+        //const wi = doc.internal.pageSize.getWidth();
+       // console.log("width= " +wi);
+       // const hei = doc.internal.pageSize.getHeight();
+       // console.log("width= " +hei);
 
         const xOffSet1 = (doc.internal.pageSize.width/2) - (doc.getStringUnitWidth("ANN-NOOR CONTRUCTION")*10);
         const xOffSet2 = (doc.internal.pageSize.width/2) - (doc.getStringUnitWidth("IQBAL(BAVA) CHATI")*10);
